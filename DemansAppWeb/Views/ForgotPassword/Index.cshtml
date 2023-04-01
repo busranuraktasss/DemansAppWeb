@@ -1,16 +1,57 @@
-﻿@section css{
+﻿@{
+    ViewData["Title"] = "ForgotPassword Page";
+    Layout = "";
+}
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/htmls; charset=utf-8" />
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-9" />
+    <meta http-equiv="content-type" content="text/html; charset=windows-1254" />
+    <meta http-equiv="content-type" content="text/html; charset=x-mac-turkish" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Language" content="TR" />
+    <title>DemansApp</title>
+    <link rel="shortcut icon" href="~/assets/images/demans_logo_sm.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+    <meta content="" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- App favicon -->
+    <!-- jvectormap -->
+    <link href="~/plugins/jvectormap/jquery-jvectormap-2.0.2.css" rel="stylesheet">
+
+    <!-- App css -->
+
+    <link href="~/plugins/datatables/datatable2/datatables-1.13.4/css/jquery.datatables.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="~/assets/css/icons.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/assets/css/metisMenu.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/plugins/daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet" type="text/css" href="~/assets/css/app.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/plugins/datatables/dataTables.bootstrap5.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/plugins/datatables/buttons.bootstrap5.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/plugins/sweet-alert2/sweetalert2.min.css" />
+    <link href="~/plugins/datatables/datatable2/responsive-2.4.1/css/responsive.datatables.css" rel="stylesheet" />
+    <link href="~/plugins/datatables/datatable2/responsive-2.4.1/css/responsive.datatables.min.css" rel="stylesheet" />
+    <link href="~/plugins/datatables/datatable2/responsive-2.4.1/css/responsive.bootstrap5.css" rel="stylesheet" />
+    <link href="~/plugins/datatables/datatable2/responsive-2.4.1/css/responsive.bootstrap5.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="~/assets/css/app.min.css" />
+    <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="~/Select2/css/select2.css" />
+    
+    <link rel="stylesheet" type="text/css" href="~/assets/css/bootstrap.min.css" />
+
     <style type="text/css">
     .button-style{
       background-color:#ED5E31 !important;
       border-color:#ED5E31 !important;
     }
     </style>
-}
 
-<body class="account-body accountbg">
+</head>
 
-        <!-- Recover-pw page -->
-        <div class="container">
+<div class="container">
             <div class="row vh-100 d-flex justify-content-center">
                 <div class="col-12 align-self-center">
                     <div class="row">
@@ -21,11 +62,12 @@
                                         <a href="index.html" class="logo logo-admin">
                                             <img src="~/assets/images/demans_logo_sm.png" height="50" alt="logo" class="auth-logo">
                                         </a>
+                                        <h4 class="mt-3 mb-1 fw-semibold text-white font-18"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">DemansApp İçin Şifreyi Sıfırla</font></font></h4>   
                                         <p class="text-muted  mb-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">E-postanızı girin, talimatlar size gönderilecek!</font></font></p>  
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <form class="form-horizontal auth-form" action="index.html">                
+                                    <form class="form-horizontal auth-form" action="https://mannatthemes.com/dastone/default/index.html">                
                                         <div class="form-group mb-2">
                                             <label class="form-label" for="username"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">E-posta</font></font></label>
                                             <div class="input-group">                                                                                         
@@ -39,7 +81,7 @@
                                             </div><!--end col--> 
                                         </div> <!--end form-group-->                           
                                     </form><!--end form-->
-                                    <p class="text-muted mb-0 mt-3"><font style="vertical-align: inherit;"></font><a href="@Url.Action("Index", "Login")" class="text-primary ms-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Oturum açın</font></font></a></p>
+                                    <p class="text-muted mb-0 mt-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Bunu hatırlamak ?  </font></font><a href="auth-register.html" class="text-primary ms-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Oturum açın</font></font></a></p>
                                 </div>
                                 <div class="card-body bg-light-alt text-center">
                                     <span class="text-muted d-none d-sm-inline-block"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">© </font></font><script>
@@ -51,20 +93,4 @@
                     </div><!--end row-->
                 </div><!--end col-->
             </div><!--end row-->
-        </div><!--end container-->
-        <!-- End Recover-pw page -->
-
-        
-
-
-        <!-- jQuery  -->
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/bootstrap.bundle.min.js"></script>
-        <script src="assets/js/waves.js"></script>
-        <script src="assets/js/feather.min.js"></script>
-        <script src="assets/js/simplebar.min.js"></script><div id="goog-gt-" class="skiptranslate VIpgJd-yAWNEb-L7lbkb" dir="ltr"><div style="padding: 8px;"><div><div class="VIpgJd-yAWNEb-l4eHX"><img src="https://www.gstatic.com/images/branding/product/1x/translate_24dp.png" width="20" height="20" alt="Google Çeviri"></div></div></div><div style="padding: 8px; float: left; width: 100%;"><h1 class="VIpgJd-yAWNEb-r4nke VIpgJd-yAWNEb-mrxPge">Orijinal metin</h1></div><div style="padding: 8px;"><div class="VIpgJd-yAWNEb-nVMfcd-fmcmS"></div></div><div class="VIpgJd-yAWNEb-cGMI2b" style="padding: 8px;"><div class="VIpgJd-yAWNEb-Z0Arqf-PLDbbf"><span class="VIpgJd-yAWNEb-Z0Arqf-hSRGPd">Daha iyi bir çeviri ile katkıda bulunun</span></div><div class="VIpgJd-yAWNEb-fw42Ze-Z0Arqf-haAclf"><hr style="color: #ccc; background-color: #ccc; height: 1px; border: none;"><div class="VIpgJd-yAWNEb-Z0Arqf-H9tDt"></div></div></div><div class="VIpgJd-yAWNEb-jOfkMb-Ne3sFf" style="display: none;"></div></div>
-
-        
-    
-
-</body>
+        </div>
