@@ -8,66 +8,880 @@
       background-color:#ED5E31 !important;
       border-color:#ED5E31 !important;
     }
+    .nav-style{
+      display:block;
+      padding:.5rem 1rem;color:#ED5E31;text-decoration:none;
+      transition:color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out@media (prefers-reduced-motion: reduce)
+    }
+
+    .dbutton-style{
+      background-color:white !important;
+      border-color:#ED5E31 !important;
+      color:#ED5E31 !important;
+    }
     </style>
 }
 
-<div class="container">
 <div class="row">
-                        <div class=" col-lg-6 mx-auto">
-                            <div class="card">
+                        <div class="col-12 p-5">
+                            <div class="card ">
                                 <div class="card-body">
-                                    <div class="text-center p-3">
-                                        <a href="index.html" class="logo logo-admin">
-                                            <img src="~/assets/images/demans_logo_sm.png" height="50" alt="logo" class="auth-logo">
-                                        </a>
-                                        <p class="text-muted  mb-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Oturum açın.</font></font></p>  
-                                    </div>
-                                </div>
-                                <div class="card-body p-0">
-                                    <div class="tab-content">
-                                        <div class="tab-pane active p-3" id="LogIn_Tab" role="tabpanel">                                        
-                                            <form class="form-horizontal auth-form" action="index.html">
-                
-                                                <div class="form-group mb-2">
-                                                    <label class="form-label" for="username"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Kullanıcı adı</font></font></label>
-                                                    <div class="input-group">                                                                                         
-                                                        <input type="text" class="form-control" name="username" id="username" placeholder="Kullanıcı adı girin">
-                                                    </div>                                    
-                                                </div><!--end form-group--> 
-                    
-                                                <div class="form-group mb-2">
-                                                    <label class="form-label" for="userpassword"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Şifre</font></font></label>                                            
-                                                    <div class="input-group">                                  
-                                                        <input type="password" class="form-control" name="password" id="userpassword" placeholder="Parolanı Gir">
-                                                    </div>                               
-                                                </div><!--end form-group--> 
-                    
-                                                <div class="form-group row my-3">
-                                                    <div class="col-sm-6">
-                                                        <div class="custom-control custom-switch switch-success">
-                                                            <input type="checkbox" class="custom-control-input" id="customSwitchSuccess">
-                                                            <label class="form-label text-muted" for="customSwitchSuccess"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Beni Hatırla</font></font></label>
+                                    <div class="dastone-profile">
+                                        <div class="row">
+                                            <div class="col-lg-4 align-self-center mb-3 mb-lg-0">
+                                                <div class="dastone-profile-main">
+                                                    <div class="dastone-profile-main-pic">
+                                                        <img src="assets/images/users/user-4.jpg" alt="" height="110" class="rounded-circle">
+                                                        <span class="dastone-profile_main-pic-change">
+                                                            <i class="fas fa-camera"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="dastone-profile_user-detail">
+                                                        <h5 class="dastone-user-name"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Rosa Dodson</font></font></h5>                                                        
+                                                    </div>
+                                                </div>                                                
+                                            </div><!--end col-->
+                                            
+                                            <div class="col-lg-4 ms-auto align-self-center">
+                                                <ul class="list-unstyled personal-detail mb-0">
+                                                    <li class=""><i class="ti ti-mobile me-2 text-secondary font-16 align-middle"></i> <b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">telefon</font></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> : +91 23456 78910</font></font></li>
+                                                    <li class="mt-2"><i class="ti ti-email text-secondary font-16 align-middle me-2"></i> <b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">E-posta</font></font></b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> : mannat.theme@gmail.com</font></font></li>
+                                                </ul>
+                                            </div><!--end col-->
+                                        </div><!--end row-->
+                                    </div><!--end f_profile-->                                                                                
+                                </div><!--end card-body-->          
+                            </div> <!--end card-->    
+                        </div><!--end col-->
+                        <div class="pb-4">
+                        <ul class="nav-border nav nav-pills mb-0" id="pills-tab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link" id="Profile_Project_tab" data-bs-toggle="pill" href="#Profile_Project"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Proje</font></font></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="Profile_Post_tab" data-bs-toggle="pill" href="#Profile_Post"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Postalamak</font></font></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="portfolio_detail_tab" data-bs-toggle="pill" href="#Profile_Portfolio"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">portföy</font></font></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" id="settings_detail_tab" data-bs-toggle="pill" href="#Profile_Settings"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ayarlar</font></font></a>
+                            </li>
+                        </ul>        
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="tab-content" id="pills-tabContent">
+                                <div class="tab-pane fade" id="Profile_Project" role="tabpanel" aria-labelledby="Profile_Project_tab">
+                                    <div class="row mb-4">
+                                        <div class="col">
+                                            <form>
+                                                <div class="input-group">                               
+                                                    <input type="text" id="example-input1-group2" name="example-input1-group2" class="form-control" placeholder="Aramak">
+                                                    <button type="button" class="btn btn-primary"><i class="fas fa-search"></i></button>
+                                                </div>                                                
+                                            </form>                                            
+                                        </div><!--end col-->
+                                        <div class="col-auto">
+                                            <button type="button" class="btn btn-primary"><i class="fas fa-filter"></i></button>
+                                            <button type="button" class="btn btn-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Proje Ekle</font></font></button>                                                                                        
+                                        </div><!--end col-->                                        
+                                    </div><!--end row-->
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <div class="card">
+                                                <div class="card-body ">
+                                                    <div class="text-center">
+                                                        <img src="assets/images/widgets/project2.jpg" alt="" class="rounded-circle d-block mx-auto mt-2" height="70">
+                                                        <h4 class="m-0 fw-semibold text-dark font-16 mt-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Vücut bakımı</font></font></h4>   
+                                                        <p class="text-muted  mb-0 font-13"><span class="text-dark"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Müşteri :</font></font></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Hyman M. Cross</font></font></p> 
+                                                    </div>                                                    
+                                                    <div class="row mt-4 d-flex align-items-center">
+                                                        <div class="col">
+                                                            <h5 class="font-22 m-0 fw-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">26.100 dolar</font></font></h5> 
+                                                            <p class="mb-0 text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Toplam bütçe</font></font></p>
                                                         </div>
-                                                    </div><!--end col--> 
-                                                    <div class="col-sm-6 text-end">
-                                                        <a href="auth-recover-pw.html" class="text-muted font-13"><i class="dripicons-lock"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Parolanızı mı unuttunuz?</font></font></a>                                    
-                                                    </div><!--end col--> 
-                                                </div><!--end form-group--> 
-                    
-                                                <div class="form-group mb-0 row">
-                                                    <div class="col-12">
-                                                        <button class="btn btn-primary w-100 waves-effect waves-light button-style" type="button"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Giriş yap</font></font><i class="fas fa-sign-in-alt ms-1"></i></button>
-                                                    </div><!--end col--> 
-                                                </div> <!--end form-group-->                           
-                                            </form><!--end form-->
-                                            <div class="m-3 text-center text-muted">
-                                                <p class="mb-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hesabınız yok mu?  </font></font><a  href=@Url.Action("Index", "Register") class="text-primary ms-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hesap oluşturun</font></font></a></p>
+                                                        <div class="col-auto">
+                                                            <a href="#" class="btn btn-sm btn-outline-secondary  px-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Daha fazla detay</font></font></a>
+                                                        </div>
+                                                    </div>                                                    
+                                                </div><!--end card-body-->          
+                                            </div> <!--end card-->    
+                                        </div><!--end col-->
+                                        <div class="col-3">
+                                            <div class="card">
+                                                <div class="card-body ">
+                                                    <div class="text-center">
+                                                        <img src="assets/images/widgets/project4.jpg" alt="" class="rounded-circle d-block mx-auto mt-2" height="70">
+                                                        <h4 class="m-0 fw-semibold text-dark font-16 mt-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Benim Dünyamı Ayırt</font></font></h4>   
+                                                        <p class="text-muted  mb-0 font-13"><span class="text-dark"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Müşteri :</font></font></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Johnson M. delly</font></font></p> 
+                                                    </div>                                                    
+                                                    <div class="row mt-4 d-flex align-items-center">
+                                                        <div class="col">
+                                                            <h5 class="font-22 m-0 fw-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">71.100 dolar</font></font></h5> 
+                                                            <p class="mb-0 text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Toplam bütçe</font></font></p>
+                                                        </div>
+                                                        <div class="col-auto">
+                                                            <a href="#" class="btn btn-sm btn-outline-secondary  px-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Daha fazla detay</font></font></a>
+                                                        </div>
+                                                    </div>                                                    
+                                                </div><!--end card-body-->          
+                                            </div> <!--end card-->    
+                                        </div><!--end col-->
+
+                                        <div class="col-3">
+                                            <div class="card">
+                                                <div class="card-body ">
+                                                    <div class="text-center">
+                                                        <img src="assets/images/widgets/project3.jpg" alt="" class="rounded-circle d-block mx-auto mt-2" height="70">
+                                                        <h4 class="m-0 fw-semibold text-dark font-16 mt-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Bankacılık</font></font></h4>   
+                                                        <p class="text-muted  mb-0 font-13"><span class="text-dark"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Müşteri :</font></font></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Hyman M. Cross</font></font></p> 
+                                                    </div>                                                    
+                                                    <div class="row mt-4 d-flex align-items-center">
+                                                        <div class="col">
+                                                            <h5 class="font-22 m-0 fw-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">56.700 dolar</font></font></h5> 
+                                                            <p class="mb-0 text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Toplam bütçe</font></font></p>
+                                                        </div>
+                                                        <div class="col-auto">
+                                                            <a href="#" class="btn btn-sm btn-outline-secondary  px-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Daha fazla detay</font></font></a>
+                                                        </div>
+                                                    </div>                                                    
+                                                </div><!--end card-body-->          
+                                            </div> <!--end card-->    
+                                        </div><!--end col-->
+                                        <div class="col-3">
+                                            <div class="card">
+                                                <div class="card-body ">
+                                                    <div class="text-center">
+                                                        <img src="assets/images/widgets/project1.jpg" alt="" class="rounded-circle d-block mx-auto mt-2" height="70">
+                                                        <h4 class="m-0 fw-semibold text-dark font-16 mt-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Para transferi</font></font></h4>   
+                                                        <p class="text-muted  mb-0 font-13"><span class="text-dark"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Müşteri:</font></font></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Jack Z Jackson</font></font></p> 
+                                                    </div>                                                    
+                                                    <div class="row mt-4 d-flex align-items-center">
+                                                        <div class="col">
+                                                            <h5 class="font-22 m-0 fw-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">48.200 dolar</font></font></h5> 
+                                                            <p class="mb-0 text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Toplam bütçe</font></font></p>
+                                                        </div>
+                                                        <div class="col-auto">
+                                                            <a href="#" class="btn btn-sm btn-outline-secondary  px-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Daha fazla detay</font></font></a>
+                                                        </div>
+                                                    </div>                                                    
+                                                </div><!--end card-body-->          
+                                            </div> <!--end card-->    
+                                        </div><!--end col-->                                        
+                                    </div><!--end row--> 
+
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <div class="card">
+                                                <div class="card-body ">
+                                                    <div class="text-center">
+                                                        <img src="assets/images/widgets/project1.jpg" alt="" class="rounded-circle d-block mx-auto mt-2" height="70">
+                                                        <h4 class="m-0 fw-semibold text-dark font-16 mt-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Vücut bakımı</font></font></h4>   
+                                                        <p class="text-muted  mb-0 font-13"><span class="text-dark"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Müşteri :</font></font></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Hyman M. Cross</font></font></p> 
+                                                    </div>                                                    
+                                                    <div class="row mt-4 d-flex align-items-center">
+                                                        <div class="col">
+                                                            <h5 class="font-22 m-0 fw-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">26.100 dolar</font></font></h5> 
+                                                            <p class="mb-0 text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Toplam bütçe</font></font></p>
+                                                        </div>
+                                                        <div class="col-auto">
+                                                            <a href="#" class="btn btn-sm btn-outline-secondary  px-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Daha fazla detay</font></font></a>
+                                                        </div>
+                                                    </div>                                                    
+                                                </div><!--end card-body-->          
+                                            </div> <!--end card-->    
+                                        </div><!--end col-->
+                                        <div class="col-3">
+                                            <div class="card">
+                                                <div class="card-body ">
+                                                    <div class="text-center">
+                                                        <img src="assets/images/widgets/project3.jpg" alt="" class="rounded-circle d-block mx-auto mt-2" height="70">
+                                                        <h4 class="m-0 fw-semibold text-dark font-16 mt-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Benim Dünyamı Ayırt</font></font></h4>   
+                                                        <p class="text-muted  mb-0 font-13"><span class="text-dark"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Müşteri :</font></font></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Johnson M. delly</font></font></p> 
+                                                    </div>                                                    
+                                                    <div class="row mt-4 d-flex align-items-center">
+                                                        <div class="col">
+                                                            <h5 class="font-22 m-0 fw-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">71.100 dolar</font></font></h5> 
+                                                            <p class="mb-0 text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Toplam bütçe</font></font></p>
+                                                        </div>
+                                                        <div class="col-auto">
+                                                            <a href="#" class="btn btn-sm btn-outline-secondary  px-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Daha fazla detay</font></font></a>
+                                                        </div>
+                                                    </div>                                                    
+                                                </div><!--end card-body-->          
+                                            </div> <!--end card-->    
+                                        </div><!--end col-->
+
+                                        <div class="col-3">
+                                            <div class="card">
+                                                <div class="card-body ">
+                                                    <div class="text-center">
+                                                        <img src="assets/images/widgets/project4.jpg" alt="" class="rounded-circle d-block mx-auto mt-2" height="70">
+                                                        <h4 class="m-0 fw-semibold text-dark font-16 mt-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Bankacılık</font></font></h4>   
+                                                        <p class="text-muted  mb-0 font-13"><span class="text-dark"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Müşteri :</font></font></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Hyman M. Cross</font></font></p> 
+                                                    </div>                                                    
+                                                    <div class="row mt-4 d-flex align-items-center">
+                                                        <div class="col">
+                                                            <h5 class="font-22 m-0 fw-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">56.700 dolar</font></font></h5> 
+                                                            <p class="mb-0 text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Toplam bütçe</font></font></p>
+                                                        </div>
+                                                        <div class="col-auto">
+                                                            <a href="#" class="btn btn-sm btn-outline-secondary  px-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Daha fazla detay</font></font></a>
+                                                        </div>
+                                                    </div>                                                    
+                                                </div><!--end card-body-->          
+                                            </div> <!--end card-->    
+                                        </div><!--end col-->
+                                        <div class="col-3">
+                                            <div class="card">
+                                                <div class="card-body ">
+                                                    <div class="text-center">
+                                                        <img src="assets/images/widgets/project2.jpg" alt="" class="rounded-circle d-block mx-auto mt-2" height="70">
+                                                        <h4 class="m-0 fw-semibold text-dark font-16 mt-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Para transferi</font></font></h4>   
+                                                        <p class="text-muted  mb-0 font-13"><span class="text-dark"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Müşteri:</font></font></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Jack Z Jackson</font></font></p> 
+                                                    </div>                                                    
+                                                    <div class="row mt-4 d-flex align-items-center">
+                                                        <div class="col">
+                                                            <h5 class="font-22 m-0 fw-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">48.200 dolar</font></font></h5> 
+                                                            <p class="mb-0 text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Toplam bütçe</font></font></p>
+                                                        </div>
+                                                        <div class="col-auto">
+                                                            <a href="#" class="btn btn-sm btn-outline-secondary  px-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Daha fazla detay</font></font></a>
+                                                        </div>
+                                                    </div>                                                    
+                                                </div><!--end card-body-->          
+                                            </div> <!--end card-->    
+                                        </div><!--end col-->                                        
+                                    </div><!--end row-->                                   
+                                </div><!--end tab-pane-->
+                                <div class="tab-pane fade" id="Profile_Post" role="tabpanel" aria-labelledby="Profile_Post_tab">
+                                    <div class="row">
+                                        <div class="col-lg-9">
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <div class="card">                                                        
+                                                        <div class="card-body  report-card">
+                                                            <div class="row d-flex justify-content-center">
+                                                                <div class="col">
+                                                                    <p class="text-dark mb-1 fw-semibold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Görüntüleme</font></font></p>
+                                                                    <h3 class="my-2 font-24 fw-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">24k</font></font></h3>
+                                                                    <p class="mb-0 text-truncate text-muted"><i class="ti ti-bell text-warning font-18"></i>
+                                                                        <span class="text-dark fw-semibold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Bu hafta 1500</font></font></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Yeni abone
+                                                                    </font></font></p>
+                                                                </div>
+                                                                <div class="col-auto align-self-center">
+                                                                    <div class="d-flex justify-content-center align-items-center thumb-xl bg-light-alt rounded-circle mx-auto">
+                                                                        <i class="ti ti-eye font-30 align-self-center text-muted"></i>
+                                                                    </div>                                                                    
+                                                                </div>
+                                                            </div>
+                                                        </div><!--end card-body-->          
+                                                    </div> <!--end card-->    
+                                                </div><!--end col-->
+                                                <div class="col-lg-6">
+                                                    <div class="card">                                                        
+                                                        <div class="card-body  report-card">
+                                                            <div class="row d-flex justify-content-center">
+                                                                <div class="col">
+                                                                    <p class="text-dark mb-1 fw-semibold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Yorumlar</font></font></p>
+                                                                    <h3 class="my-2 font-24 fw-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">24k</font></font></h3>
+                                                                    <p class="mb-0 text-truncate text-muted"><i class="ti ti-thumb-up text-success font-18"></i>
+                                                                        <span class="text-dark fw-semibold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">854</font></font></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Yeni Bu hafta beğen
+                                                                    </font></font></p>
+                                                                </div>
+                                                                <div class="col-auto align-self-center">
+                                                                    <div class="d-flex justify-content-center align-items-center thumb-xl bg-light-alt rounded-circle mx-auto">
+                                                                        <i class="ti ti-brand-hipchat font-30 align-self-center text-muted"></i>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div><!--end card-body-->          
+                                                    </div> <!--end card-->    
+                                                </div><!--end col-->
+                                            </div><!--end row--> 
+                                            <div class="card">
+                                                <div class="card-body">                                                    
+                                                    <img src="assets/images/widgets/1.jpg" alt="" class="img-fluid">
+                                                    <div class="post-title mt-4">
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <span class="badge badge-soft-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Doğal</font></font></span>
+                                                            </div><!--end col-->
+                                                            <div class="col-auto">
+                                                                <span class="text-muted"><i class="far fa-calendar me-1"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">02 Temmuz 2020</font></font></span>
+                                                            </div><!--end col-->
+                                                        </div><!--end row-->
+                                                       
+                                                        <h5 href="#" class="font-20 fw-bold d-block mt-3 mb-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Doğadan daha güzel bir şey yoktur.</font></font></h5>
+                                                        <span class="font-15 bg-light py-2 px-3 rounded"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Fotoğraf çekmek hayatın tadını yoğun bir şekilde çıkarmaktır.</font></font></span>
+                                                        <p class="font-15 mt-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Bir sayfanın düzenine bakıldığında okunabilir içeriğin okuyucunun dikkatini dağıtacağı uzun zamandır bilinen bir gerçektir. </font><font style="vertical-align: inherit;">Lorem Ipsum'u kullanmanın amacı, 'İçerik burada, içerik burada' seçeneğinin aksine, aşağı yukarı normal bir harf dağılımına sahip olması ve okunabilir bir İngilizce gibi görünmesidir. </font><font style="vertical-align: inherit;">Birçok masaüstü yayıncılık paketi ve web sayfası düzenleyicisi artık varsayılan model metni olarak Lorem Ipsum kullanıyor ve 'lorem ipsum' için bir arama yapıyor. 
+
+                                                        </font></font></p>
+                                                        <blockquote class="blockquote border-start ps-4">
+                                                            <p class="font-18"><i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere ante ante."</font></font></i></p>
+                                                            <footer class="blockquote-footer"><font style="vertical-align: inherit;"><cite title="Kaynak başlığı"><font style="vertical-align: inherit;">Source Title'da</font></cite><font style="vertical-align: inherit;"> ünlü biri</font></font><cite title="Kaynak başlığı"><font style="vertical-align: inherit;"></font></cite></footer>
+                                                        </blockquote>
+                                                        <p class="font-15"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Fotoğraf çekmek, saniyenin her yüzde birinde bir hayatın tadını yoğun bir şekilde çıkarmaktır - Marc Riboud. </font><font style="vertical-align: inherit;">Bakma ve anlama sevinci doğanın en güzel armağanıdır.</font></font></p>
+                                                        <p class="font-15 mb-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Bir sayfanın düzenine bakıldığında okunabilir içeriğin okuyucunun dikkatini dağıtacağı uzun zamandır bilinen bir gerçektir. </font><font style="vertical-align: inherit;">Lorem Ipsum'u kullanmanın amacı, 'İçerik burada, içerik burada' seçeneğinin aksine, aşağı yukarı normal bir harf dağılımına sahip olması ve okunabilir bir İngilizce gibi görünmesidir. </font><font style="vertical-align: inherit;">Birçok masaüstü yayıncılık paketi ve web sayfası düzenleyicisi artık varsayılan model metni olarak Lorem Ipsum kullanıyor ve 'lorem ipsum' için bir arama yapıyor. 
+
+                                                        </font></font></p>
+                                                    </div>
+                                                </div>
+                                                <div class="card-body pt-0">
+                                                    <div class="row mb-3">
+                                                        <div class="col">
+                                                            <p class="text-dark fw-semibold mb-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">makale etiketleri</font></font></p>
+                                                        </div>
+                                                    </div>
+                                                    <span class="badge bg-soft-dark px-3 py-2 fw-semibold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Müzik</font></font></span>
+                                                    <span class="badge bg-soft-dark px-3 py-2 fw-semibold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hayvanlar</font></font></span>
+                                                    <span class="badge bg-soft-dark px-3 py-2 fw-semibold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Doğal</font></font></span>
+                                                    <span class="badge bg-soft-dark px-3 py-2 fw-semibold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Yiyecek</font></font></span>
+                                                    <span class="badge bg-soft-dark px-3 py-2 fw-semibold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Moda</font></font></span>
+                                                    <span class="badge bg-soft-dark px-3 py-2 fw-semibold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">sağlık</font></font></span>
+                                                    <span class="badge bg-soft-dark px-3 py-2 fw-semibold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hayır kurumu</font></font></span>
+                                                </div>
+                                            </div>   
+                                            <div class="card">
+                                                <div class="card-body pb-0">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <p class="text-dark fw-semibold mb-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Yorumlar (205)</font></font></p>
+                                                        </div><!--end col-->
+                                                    </div><!--end row-->    
+                                                </div><!--end card-body-->  
+                                                <div class="card-body border-bottom-dashed"> 
+                                                    <ul class="list-unstyled mb-0">
+                                                        <li>
+                                                            <div class="row">
+                                                                <div class="col-auto">
+                                                                    <img src="assets/images/users/user-2.jpg" alt="" class="thumb-md rounded-circle">
+                                                                </div><!--end col-->
+                                                                <div class="col">
+                                                                    <div class="comment-body ms-n2 bg-light-alt p-3">
+                                                                        <div class="row">
+                                                                            <div class="col">
+                                                                                <p class="text-dark fw-semibold mb-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Martin Luther</font></font></p>
+                                                                            </div><!--end col-->
+                                                                            <div class="col-auto">
+                                                                                <span class="text-muted"><i class="far fa-clock me-1"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">30 dakika önce</font></font></span>
+                                                                            </div><!--end col-->
+                                                                        </div><!--end row-->                                                                
+                                                                        <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Bir sayfanın düzenine bakıldığında okunabilir içeriğin okuyucunun dikkatini dağıtacağı uzun zamandır bilinen bir gerçektir. </font><font style="vertical-align: inherit;">Lorem Ipsum'u kullanmanın amacı, 'İçerik burada, içerik burada' seçeneğinin aksine, aşağı yukarı normal bir harf dağılımına sahip olması ve okunabilir bir İngilizce gibi görünmesidir.
+                                                                        </font></font></p>
+                                                                        <a href="#" class="text-primary"><i class="fas fa-reply me-1"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tekrar oynat</font></font></a>
+                                                                    </div>
+                                                                </div><!--end col-->
+                                                            </div><!--end row-->
+                                                            <ul class="list-unstyled ms-5">
+                                                                <li>
+                                                                    <div class="row mt-3">
+                                                                        <div class="col-auto">
+                                                                            <img src="assets/images/logo-sm.png" alt="" class="thumb-md rounded-circle">
+                                                                        </div><!--end col-->
+                                                                        <div class="col">
+                                                                            <div class="comment-body ms-n2 bg-light-alt p-3">
+                                                                                <div class="row">
+                                                                                    <div class="col">
+                                                                                        <p class="text-dark fw-semibold mb-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">David Yazar</font></font></p>
+                                                                                    </div><!--end col-->
+                                                                                    <div class="col-auto">
+                                                                                        <span class="text-muted"><i class="far fa-clock me-1"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">37 dakika önce</font></font></span>
+                                                                                    </div><!--end col-->
+                                                                                </div><!--end row-->                                                                
+                                                                                <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Bir sayfanın düzenine bakıldığında okunabilir içeriğin okuyucunun dikkatini dağıtacağı uzun zamandır bilinen bir gerçektir. 
+                                                                                </font></font></p>
+                                                                                <p class="mb-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Teşekkür ederim</font></font></p>
+                                                                            </div>
+                                                                        </div><!--end col-->
+                                                                    </div><!--end row-->
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="mt-3">
+                                                            <div class="row">
+                                                                <div class="col-auto">
+                                                                    <img src="assets/images/users/user-1.jpg" alt="" class="thumb-md rounded-circle">
+                                                                </div><!--end col-->
+                                                                <div class="col">
+                                                                    <div class="comment-body ms-n2 bg-light-alt p-3">
+                                                                        <div class="row">
+                                                                            <div class="col">
+                                                                                <p class="text-dark fw-semibold mb-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Joseph Rust</font></font></p>
+                                                                            </div><!--end col-->
+                                                                            <div class="col-auto">
+                                                                                <span class="text-muted"><i class="far fa-clock me-1"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">40 dakika önce</font></font></span>
+                                                                            </div><!--end col-->
+                                                                        </div><!--end row-->                                                                
+                                                                        <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Bir sayfanın düzenine bakıldığında okunabilir içeriğin okuyucunun dikkatini dağıtacağı uzun zamandır bilinen bir gerçek midir?
+                                                                        </font></font></p>
+                                                                        <a href="#" class="text-primary"><i class="fas fa-reply me-1"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tekrar oynat</font></font></a>
+                                                                    </div>
+                                                                </div><!--end col-->
+                                                            </div><!--end row--> 
+                                                        </li>
+                                                        <li class="mt-3">
+                                                            <div class="row">
+                                                                <div class="col-auto">
+                                                                    <img src="assets/images/users/user-5.jpg" alt="" class="thumb-md rounded-circle">
+                                                                </div><!--end col-->
+                                                                <div class="col">
+                                                                    <div class="comment-body ms-n2 bg-light-alt p-3">
+                                                                        <div class="row">
+                                                                            <div class="col">
+                                                                                <p class="text-dark fw-semibold mb-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Matt Rosales</font></font></p>
+                                                                            </div><!--end col-->
+                                                                            <div class="col-auto">
+                                                                                <span class="text-muted"><i class="far fa-clock me-1"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">40 dakika önce</font></font></span>
+                                                                            </div><!--end col-->
+                                                                        </div><!--end row-->                                                                
+                                                                        <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Bir sayfanın düzenine bakıldığında okunabilir içeriğin okuyucunun dikkatini dağıtacağı uzun zamandır bilinen bir gerçek midir?
+                                                                        </font></font></p>
+                                                                        <a href="#" class="text-primary"><i class="fas fa-reply me-1"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tekrar oynat</font></font></a>
+                                                                    </div>
+                                                                </div><!--end col-->
+                                                            </div><!--end row-->
+                                                            <ul class="list-unstyled ms-5">
+                                                                <li>
+                                                                    <div class="row mt-3">
+                                                                        <div class="col-auto">
+                                                                            <img src="assets/images/logo-sm.png" alt="" class="thumb-md rounded-circle">
+                                                                        </div><!--end col-->
+                                                                        <div class="col">
+                                                                            <div class="comment-body ms-n2 bg-light-alt p-3">
+                                                                                <div class="row">
+                                                                                    <div class="col">
+                                                                                        <p class="text-dark fw-semibold mb-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">David Yazar</font></font></p>
+                                                                                    </div><!--end col-->
+                                                                                    <div class="col-auto">
+                                                                                        <span class="text-muted"><i class="far fa-clock me-1"></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">37 dakika önce</font></font></span>
+                                                                                    </div><!--end col-->
+                                                                                </div><!--end row-->                                                                
+                                                                                <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Bir sayfanın düzenine bakıldığında okunabilir içeriğin okuyucunun dikkatini dağıtacağı uzun zamandır bilinen bir gerçektir. 
+                                                                                </font></font></p>
+                                                                                <p class="mb-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Teşekkür ederim</font></font></p>
+                                                                            </div>
+                                                                        </div><!--end col-->
+                                                                    </div><!--end row-->
+                                                                </li>
+                                                            </ul> 
+                                                        </li>
+                                                    </ul> 
+                                                </div><!--end card-body--> 
+                                                <div class="card-body">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <p class="text-dark fw-semibold mb-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">yorum Yap</font></font></p>
+                                                        </div><!--end col-->
+                                                    </div><!--end row-->
+                                                </div><!--end card-body--> 
+                                                <div class="card-body pt-0">
+                                                    <form>
+                                                        <div class="form-group">
+                                                            <textarea class="form-control" rows="5" id="leave_comment" placeholder="İleti"></textarea>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-sm-12 text-end">
+                                                                <button type="submit" class="btn btn-sm btn-outline-primary px-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mesaj gönder</font></font></button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div><!--end card-body-->             
+                                            </div> <!--end card-->  
+                                        </div><!--end col-->
+                                        <div class="col-lg-3">
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <div class="row align-items-center">
+                                                        <div class="col">                      
+                                                            <h4 class="card-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">popüler gönderiler</font></font></h4>                      
+                                                        </div><!--end col-->
+                                                        <div class="col-auto"> 
+                                                            <div class="dropdown">
+                                                                <a href="#" class="btn btn-sm btn-outline-light dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                                                   Bugün</font></font><i class="las la-angle-down ms-1"></i>
+                                                                </a>
+                                                                <div class="dropdown-menu dropdown-menu-right">
+                                                                    <a class="dropdown-item" href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Bugün</font></font></a>
+                                                                    <a class="dropdown-item" href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Dün</font></font></a>
+                                                                    <a class="dropdown-item" href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Geçen hafta</font></font></a>
+                                                                </div>
+                                                            </div>               
+                                                        </div><!--end col-->
+                                                    </div>  <!--end row-->                                  
+                                                </div><!--end card-header-->
+                                                <div class="card-body">
+                                                    <ul class="list-group custom-list-group mb-n3">
+                                                        <li class="list-group-item align-items-center d-flex justify-content-between">
+                                                            <div class="media">
+                                                                <img src="assets/images/small/img-2.jpg" height="40" class="me-3 align-self-center rounded" alt="...">
+                                                                <div class="media-body align-self-center"> 
+                                                                    <a href="#" class="m-0 d-block fw-semibold font-13"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Dastyle - Yönetici Panosu</font></font></a>
+                                                                    <a href="#" class="font-12 text-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">analitik-index.html</font></font></a>                                                                                           
+                                                                </div><!--end media body-->
+                                                            </div>
+                                                            <div class="align-self-center">
+                                                                <span class="text-muted mb-n2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">20 Haziran</font></font></span>
+                                                            </div>                                            
+                                                        </li>
+                                                        <li class="list-group-item align-items-center d-flex justify-content-between">
+                                                            <div class="media">
+                                                                <img src="assets/images/small/img-1.jpg" height="40" class="me-3 align-self-center rounded" alt="...">
+                                                                <div class="media-body align-self-center"> 
+                                                                    <a href="#" class="m-0 d-block fw-semibold font-13"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Metrica Simple- Yönetici Panosu</font></font></a>
+                                                                    <a href="#" class="font-12 text-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">satış endeksi.html</font></font></a>                                                                                           
+                                                                </div><!--end media body-->
+                                                            </div>
+                                                            <div class="align-self-center">
+                                                                <span class="text-muted mb-n2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">18 haziran</font></font></span>
+                                                            </div>
+                                                        </li>
+                                                        <li class="list-group-item align-items-center d-flex justify-content-between">
+                                                            <div class="media">
+                                                                <img src="assets/images/small/img-4.jpg" height="40" class="me-3 align-self-center rounded" alt="...">
+                                                                <div class="media-body align-self-center"> 
+                                                                    <a href="#" class="m-0 d-block fw-semibold font-13"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Crovex - Yönetici Panosu</font></font></a>
+                                                                    <a href="#" class="font-12 text-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">yardım masası-index.html</font></font></a>                                                                                           
+                                                                </div><!--end media body-->
+                                                            </div>
+                                                            <div class="align-self-center">
+                                                                <span class="text-muted mb-n2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">15 haziran</font></font></span>
+                                                            </div>   
+                                                        </li>
+                                                        <li class="list-group-item align-items-center d-flex justify-content-between">
+                                                            <div class="media">
+                                                                <img src="assets/images/small/img-5.jpg" height="40" class="me-3 align-self-center rounded" alt="...">
+                                                                <div class="media-body align-self-center"> 
+                                                                    <a href="#" class="m-0 d-block fw-semibold font-13"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ek - Yönetici Panosu</font></font></a>
+                                                                    <a href="#" class="font-12 text-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">takvim.html</font></font></a>                                                                                           
+                                                                </div><!--end media body-->
+                                                            </div>
+                                                            <div class="align-self-center">
+                                                                <span class="text-muted mb-n2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">12 haziran</font></font></span>
+                                                            </div>   
+                                                        </li>
+                                                    </ul>                                    
+                                                </div><!--end card-body--> 
+                                            </div><!--end card-->
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="dash-datepick">
+                                                        <input type="hidden" id="light_datepick" value="">
+                                                    <section class="lightpick lightpick--1-columns lightpick--inlined"><div class="lightpick__inner"><div class="lightpick__months"><section class="lightpick__month"><header class="lightpick__month-title-bar"><div class="lightpick__month-title"><select class="lightpick__select lightpick__select-months" dir="rtl"><option value="0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ocak</font></font></option><option value="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Şubat</font></font></option><option value="2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">mart</font></font></option><option value="3" selected="selected"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">nisan</font></font></option><option value="4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mayıs</font></font></option><option value="5"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Haziran</font></font></option><option value="6"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Temmuz</font></font></option><option value="7"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ağustos</font></font></option><option value="8"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">eylül</font></font></option><option value="9"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ekim</font></font></option><option value="10"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Kasım</font></font></option><option value="11"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Aralık</font></font></option></select><select class="lightpick__select lightpick__select-years"><option value="1900"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1900</font></font></option><option value="1901"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1901</font></font></option><option value="1902"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1902</font></font></option><option value="1903"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1903</font></font></option><option value="1904"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1904</font></font></option><option value="1905"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1905</font></font></option><option value="1906"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1906</font></font></option><option value="1907"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1907</font></font></option><option value="1908"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1908</font></font></option><option value="1909"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1909</font></font></option><option value="1910"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1910</font></font></option><option value="1911"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1911</font></font></option><option value="1912"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1912</font></font></option><option value="1913"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1913</font></font></option><option value="1914"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1914</font></font></option><option value="1915"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1915</font></font></option><option value="1916"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1916</font></font></option><option value="1917"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1917</font></font></option><option value="1918"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1918</font></font></option><option value="1919"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1919</font></font></option><option value="1920"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1920</font></font></option><option value="1921"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1921</font></font></option><option value="1922"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1922</font></font></option><option value="1923"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1923</font></font></option><option value="1924"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1924</font></font></option><option value="1925"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1925</font></font></option><option value="1926"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1926</font></font></option><option value="1927"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1927</font></font></option><option value="1928"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1928</font></font></option><option value="1929"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1929</font></font></option><option value="1930"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1930</font></font></option><option value="1931"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1931</font></font></option><option value="1932"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1932</font></font></option><option value="1933"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1933</font></font></option><option value="1934"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1934</font></font></option><option value="1935"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1935</font></font></option><option value="1936"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1936</font></font></option><option value="1937"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1937</font></font></option><option value="1938"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1938</font></font></option><option value="1939"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1939</font></font></option><option value="1940"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1940</font></font></option><option value="1941"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1941</font></font></option><option value="1942"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1942</font></font></option><option value="1943"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1943</font></font></option><option value="1944"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1944</font></font></option><option value="1945"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1945</font></font></option><option value="1946"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1946</font></font></option><option value="1947"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1947</font></font></option><option value="1948"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1948</font></font></option><option value="1949"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1949</font></font></option><option value="1950"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1950</font></font></option><option value="1951"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1951</font></font></option><option value="1952"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1952</font></font></option><option value="1953"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1953</font></font></option><option value="1954"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1954</font></font></option><option value="1955"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1955</font></font></option><option value="1956"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1956</font></font></option><option value="1957"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1957</font></font></option><option value="1958"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1958</font></font></option><option value="1959"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1959</font></font></option><option value="1960"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1960</font></font></option><option value="1961"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1961</font></font></option><option value="1962"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1962</font></font></option><option value="1963"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1963</font></font></option><option value="1964"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1964</font></font></option><option value="1965"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1965</font></font></option><option value="1966"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1966</font></font></option><option value="1967"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1967</font></font></option><option value="1968"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1968</font></font></option><option value="1969"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1969</font></font></option><option value="1970"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1970</font></font></option><option value="1971"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1971</font></font></option><option value="1972"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1972</font></font></option><option value="1973"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1973</font></font></option><option value="1974"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1974</font></font></option><option value="1975"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1975</font></font></option><option value="1976"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1976</font></font></option><option value="1977"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1977</font></font></option><option value="1978"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1978</font></font></option><option value="1979"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1979</font></font></option><option value="1980"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1980</font></font></option><option value="1981"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1981</font></font></option><option value="1982"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1982</font></font></option><option value="1983"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1983</font></font></option><option value="1984"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1984</font></font></option><option value="1985"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1985</font></font></option><option value="1986"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1986</font></font></option><option value="1987"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1987</font></font></option><option value="1988"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1988</font></font></option><option value="1989"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1989</font></font></option><option value="1990"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1990</font></font></option><option value="1991"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1991</font></font></option><option value="1992"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1992</font></font></option><option value="1993"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1993</font></font></option><option value="1994"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1994</font></font></option><option value="1995"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1995</font></font></option><option value="1996"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1996</font></font></option><option value="1997"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1997</font></font></option><option value="1998"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1998</font></font></option><option value="1999"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1999</font></font></option><option value="2000"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2000</font></font></option><option value="2001"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2001</font></font></option><option value="2002"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2002</font></font></option><option value="2003"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2003</font></font></option><option value="2004"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2004</font></font></option><option value="2005"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2005</font></font></option><option value="2006"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2006</font></font></option><option value="2007"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2007</font></font></option><option value="2008"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2008</font></font></option><option value="2009"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2009</font></font></option><option value="2010"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2010</font></font></option><option value="2011"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2011</font></font></option><option value="2012"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2012</font></font></option><option value="2013"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2013</font></font></option><option value="2014"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2014</font></font></option><option value="2015"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2015</font></font></option><option value="2016"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2016</font></font></option><option value="2017"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2017</font></font></option><option value="2018"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2018</font></font></option><option value="2019"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2019</font></font></option><option value="2020"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2020</font></font></option><option value="2021"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2021</font></font></option><option value="2022"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2022</font></font></option><option value="2023" selected="selected"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2023</font></font></option></select></div><div class="lightpick__toolbar"><button type="button" class="lightpick__previous-action"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">←</font></font></button><button type="button" class="lightpick__next-action"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">→</font></font></button></div></header><div class="lightpick__days-of-the-week"><div class="lightpick__day-of-the-week" title="Pazartesi"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Pzt</font></font></div><div class="lightpick__day-of-the-week" title="salı"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sal</font></font></div><div class="lightpick__day-of-the-week" title="Çarşamba"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Araba</font></font></div><div class="lightpick__day-of-the-week" title="Perşembe"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Başına</font></font></div><div class="lightpick__day-of-the-week" title="cuma"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Döl</font></font></div><div class="lightpick__day-of-the-week" title="Cumartesi"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">cmt</font></font></div><div class="lightpick__day-of-the-week" title="Pazar"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Paz</font></font></div></div><div class="lightpick__days"><div class="lightpick__day is-available is-previous-month" data-time="1679872197811"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">27</font></font></div><div class="lightpick__day is-available is-previous-month" data-time="1679958597811"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">28</font></font></div><div class="lightpick__day is-available is-previous-month" data-time="1680044997811"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">29</font></font></div><div class="lightpick__day is-available is-previous-month" data-time="1680131397811"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">30</font></font></div><div class="lightpick__day is-available is-previous-month" data-time="1680217797811"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">31</font></font></div><div class="lightpick__day is-available " data-time="1680304197811"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1</font></font></div><div class="lightpick__day is-available  is-today" data-time="1680390597811"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2</font></font></div><div class="lightpick__day is-available " data-time="1680476997811"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">3</font></font></div><div class="lightpick__day is-available " data-time="1680563397811"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">4</font></font></div><div class="lightpick__day is-available " data-time="1680649797811"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">5</font></font></div><div class="lightpick__day is-available " data-time="1680736197811"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">6</font></font></div><div class="lightpick__day is-available " data-time="1680822597811"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">7</font></font></div><div class="lightpick__day is-available " data-time="1680908997811"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">8</font></font></div><div class="lightpick__day is-available " data-time="1680995397811"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">9</font></font></div><div class="lightpick__day is-available " data-time="1681081797811"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">10</font></font></div><div class="lightpick__day is-available " data-time="1681168197811"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">11</font></font></div><div class="lightpick__day is-available " data-time="1681254597811"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">12</font></font></div><div class="lightpick__day is-available " data-time="1681340997811"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">13</font></font></div><div class="lightpick__day is-available " data-time="1681427397811"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">14</font></font></div><div class="lightpick__day is-available " data-time="1681513797811"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">15</font></font></div><div class="lightpick__day is-available " data-time="1681600197811"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">16</font></font></div><div class="lightpick__day is-available " data-time="1681686597811"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">17</font></font></div><div class="lightpick__day is-available " data-time="1681772997811"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">18</font></font></div><div class="lightpick__day is-available " data-time="1681859397811"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">19</font></font></div><div class="lightpick__day is-available " data-time="1681945797811"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">20</font></font></div><div class="lightpick__day is-available " data-time="1682032197811"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">21</font></font></div><div class="lightpick__day is-available " data-time="1682118597811"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">22</font></font></div><div class="lightpick__day is-available " data-time="1682204997811"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">23</font></font></div><div class="lightpick__day is-available " data-time="1682291397811"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">24</font></font></div><div class="lightpick__day is-available " data-time="1682377797811"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">25</font></font></div><div class="lightpick__day is-available " data-time="1682464197811"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">26</font></font></div><div class="lightpick__day is-available " data-time="1682550597811"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">27</font></font></div><div class="lightpick__day is-available " data-time="1682636997811"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">28</font></font></div><div class="lightpick__day is-available " data-time="1682723397811"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">29</font></font></div><div class="lightpick__day is-available " data-time="1682809797811"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">30</font></font></div></div></section></div><div class="lightpick__tooltip" style="visibility: hidden"></div></div></section></div>
+                                                </div><!--end card-body-->
+                                            </div><!--end card-->
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <div class="row align-items-center">
+                                                        <div class="col">                      
+                                                            <h4 class="card-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sosyal Profil</font></font></h4>                      
+                                                        </div><!--end col-->                                                       
+                                                    </div>  <!--end row-->                                  
+                                                </div><!--end card-header-->
+                                                <div class="card-body">
+                                                    <div class="button-list btn-social-icon">                                                
+                                                        <button type="button" class="btn btn-soft-primary btn-icon-circle">
+                                                            <i class="fab fa-facebook-f"></i>
+                                                        </button>
+                
+                                                        <button type="button" class="btn btn-soft-info btn-icon-circle ms-2">
+                                                            <i class="fab fa-twitter"></i>
+                                                        </button>
+                
+                                                        <button type="button" class="btn btn-soft-pink btn-icon-circle  ms-2">
+                                                            <i class="fab fa-dribbble"></i>
+                                                        </button>
+                                                        <button type="button" class="btn btn-soft-info btn-icon-circle  ms-2">
+                                                            <i class="fab fa-linkedin-in"></i>
+                                                        </button>
+                                                        <button type="button" class="btn btn-soft-danger btn-icon-circle  ms-2">
+                                                            <i class="fab fa-google-plus-g"></i>
+                                                        </button>
+                                                    </div>
+                                                </div><!--end card-body-->
+                                            </div><!--end card-->                                            
+                                        </div><!--end col-->
+                                    </div><!--end row-->    
+                                </div>
+                                <div class="tab-pane fade" id="Profile_Portfolio" role="tabpanel" aria-labelledby="portfolio_detail_tab">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="ribbon4 rib4-primary">
+                                                        <span class="ribbon4-band ribbon4-band-primary text-white text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">50 indirim</font></font></span>                                        
+                                                    </div><!--end ribbon-->  
+                                                    <div class="row">
+                                                        <div class="col-auto">
+                                                            <img src="assets/images/dashboards/dastyle.jpg" alt="kullanıcı" height="150" class="align-self-center mb-3 mb-lg-0">
+                                                        </div><!--end col-->
+                                                        <div class="col align-self-center">
+                                                            <p class="font-18 fw-semibold mb-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Dastyle - Yönetici ve Kontrol Paneli Şablonu</font></font></p>
+                                                            <p class="text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Dastyle bir Bootstrap 4 yönetici panosudur, tamamen duyarlıdır ve web uygulamalarını hızlı ve kolay bir şekilde oluşturmaya yardımcı olacak harika özellikler içerir.
+                                                            </font></font></p>
+                                                            <a href="#" class="btn btn-soft-primary btn-sm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Canlı Önizleme</font></font></a> 
+                                                            <a href="#" class="btn btn-soft-primary btn-sm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Şimdi İndirin</font></font></a> 
+                                                        </div><!--end col-->
+                                                    </div> <!--end row-->  
+                                                </div><!--end card-body-->
+                                            </div><!--end card-->
+                                        </div><!--end col-->  
+                                        <div class="col-md-6">
+                                            <div class="card">
+                                                <div class="card-body">                                 
+                                                    <div class="row">
+                                                        <div class="col-auto">
+                                                            <img src="assets/images/dashboards/metrica.jpg" alt="kullanıcı" height="150" class="align-self-center mb-3 mb-lg-0">
+                                                        </div><!--end col-->
+                                                        <div class="col align-self-center">
+                                                            <p class="font-18 fw-semibold mb-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Metrica - Yönetici ve Kontrol Paneli Şablonu</font></font></p>
+                                                            <p class="text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Metrica bir Bootstrap 4 yönetim panosudur, tamamen duyarlıdır ve web uygulamalarını hızlı ve kolay bir şekilde oluşturmaya yardımcı olacak harika özellikler içerir.
+                                                            </font></font></p>
+                                                            <a href="#" class="btn btn-soft-primary btn-sm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Canlı Önizleme</font></font></a> 
+                                                            <a href="#" class="btn btn-soft-primary btn-sm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Şimdi İndirin</font></font></a> 
+                                                        </div><!--end col-->
+                                                    </div> <!--end row-->        
+                                                </div><!--end card-body-->
+                                            </div><!--end card-->
+                                        </div><!--end col-->                                  
+                                    </div>  <!--end row-->
+                
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="card">
+                                                <div class="card-body">                                    
+                                                    <div class="row">
+                                                        <div class="col-auto">
+                                                            <img src="assets/images/dashboards/crovex.jpg" alt="kullanıcı" height="150" class="align-self-center mb-3 mb-lg-0">
+                                                        </div><!--end col-->
+                                                        <div class="col align-self-center">
+                                                            <p class="font-18 fw-semibold mb-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Crovex - Yönetici ve Kontrol Paneli Şablonu</font></font></p>
+                                                            <p class="text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Crovex bir Bootstrap 4 yönetici panosudur, tamamen duyarlıdır ve web uygulamalarını hızlı ve kolay bir şekilde oluşturmaya yardımcı olacak harika özellikler içerir.
+                                                            </font></font></p>
+                                                            <a href="#" class="btn btn-soft-primary btn-sm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Canlı Önizleme</font></font></a> 
+                                                            <a href="#" class="btn btn-soft-primary btn-sm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Şimdi İndirin</font></font></a> 
+                                                        </div><!--end col-->
+                                                    </div> <!--end row-->   
+                                                </div><!--end card-body-->
+                                            </div><!--end card-->
+                                        </div><!--end col-->
+                                        <div class="col-md-6">
+                                            <div class="card">
+                                                <div class="card-body">                                    
+                                                    <div class="row">
+                                                        <div class="col-auto">
+                                                            <img src="assets/images/dashboards/frogetor.jpg" alt="kullanıcı" height="150" class="align-self-center mb-3 mb-lg-0">
+                                                        </div><!--end col-->
+                                                        <div class="col align-self-center">
+                                                            <p class="font-18 fw-semibold mb-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Frogetor - Yönetici ve Kontrol Paneli Şablonu</font></font></p>
+                                                            <p class="text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Frogetor bir Bootstrap 4 yönetici panosudur, tamamen duyarlıdır ve web uygulamalarını hızlı ve kolay bir şekilde oluşturmaya yardımcı olacak harika özellikler içerir.
+                                                            </font></font></p>
+                                                            <a href="#" class="btn btn-soft-primary btn-sm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Canlı Önizleme</font></font></a> 
+                                                            <a href="#" class="btn btn-soft-primary btn-sm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Şimdi İndirin</font></font></a> 
+                                                        </div><!--end col-->
+                                                    </div> <!--end row-->    
+                                                </div><!--end card-body-->
+                                            </div><!--end card-->
+                                        </div><!--end col-->                                 
+                                    </div>  <!--end row-->
+                
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="card">
+                                                <div class="card-body">                                 
+                                                    <div class="row">
+                                                        <div class="col-auto">
+                                                            <img src="assets/images/dashboards/metrica.jpg" alt="kullanıcı" height="150" class="align-self-center mb-3 mb-lg-0">
+                                                        </div><!--end col-->
+                                                        <div class="col align-self-center">
+                                                            <p class="font-18 fw-semibold mb-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Metrica - Yönetici ve Kontrol Paneli Şablonu</font></font></p>
+                                                            <p class="text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Metrica bir Bootstrap 4 yönetim panosudur, tamamen duyarlıdır ve web uygulamalarını hızlı ve kolay bir şekilde oluşturmaya yardımcı olacak harika özellikler içerir.
+                                                            </font></font></p>
+                                                            <a href="#" class="btn btn-soft-primary btn-sm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Canlı Önizleme</font></font></a> 
+                                                            <a href="#" class="btn btn-soft-primary btn-sm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Şimdi İndirin</font></font></a> 
+                                                        </div><!--end col-->
+                                                    </div> <!--end row-->       
+                                                </div><!--end card-body-->
+                                            </div><!--end card-->
+                                        </div><!--end col-->
+                                        <div class="col-md-6">
+                                            <div class="card">
+                                                <div class="card-body">                    
+                                                    <div class="row">
+                                                        <div class="col-auto">
+                                                            <img src="assets/images/dashboards/dastyle.jpg" alt="kullanıcı" height="150" class="align-self-center mb-3 mb-lg-0">
+                                                        </div><!--end col-->
+                                                        <div class="col align-self-center">
+                                                            <p class="font-18 fw-semibold mb-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Dastyle - Yönetici ve Kontrol Paneli Şablonu</font></font></p>
+                                                            <p class="text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Dastyle bir Bootstrap 4 yönetici panosudur, tamamen duyarlıdır ve web uygulamalarını hızlı ve kolay bir şekilde oluşturmaya yardımcı olacak harika özellikler içerir.
+                                                            </font></font></p>
+                                                            <a href="#" class="btn btn-soft-primary btn-sm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Canlı Önizleme</font></font></a> 
+                                                            <a href="#" class="btn btn-soft-primary btn-sm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Şimdi İndirin</font></font></a> 
+                                                        </div><!--end col-->
+                                                    </div> <!--end row-->   
+                                                </div><!--end card-body-->
+                                            </div><!--end card-->
+                                        </div><!--end col-->                                 
+                                    </div>  <!--end row-->
+                
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="card">
+                                                <div class="card-body">                              
+                                                    <div class="row">
+                                                        <div class="col-auto">
+                                                            <img src="assets/images/dashboards/frogetor.jpg" alt="kullanıcı" height="150" class="align-self-center mb-3 mb-lg-0">
+                                                        </div><!--end col-->
+                                                        <div class="col align-self-center">
+                                                            <p class="font-18 fw-semibold mb-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Frogetor - Yönetici ve Kontrol Paneli Şablonu</font></font></p>
+                                                            <p class="text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Frogetor bir Bootstrap 4 yönetici panosudur, tamamen duyarlıdır ve web uygulamalarını hızlı ve kolay bir şekilde oluşturmaya yardımcı olacak harika özellikler içerir.
+                                                            </font></font></p>
+                                                            <a href="#" class="btn btn-soft-primary btn-sm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Canlı Önizleme</font></font></a> 
+                                                            <a href="#" class="btn btn-soft-primary btn-sm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Şimdi İndirin</font></font></a> 
+                                                        </div><!--end col-->
+                                                    </div> <!--end row-->  
+                                                </div><!--end card-body-->
+                                            </div><!--end card-->
+                                        </div><!--end col--> 
+                                        <div class="col-md-6">
+                                            <div class="card">
+                                                <div class="card-body">                               
+                                                    <div class="row">
+                                                        <div class="col-auto">
+                                                            <img src="assets/images/dashboards/crovex.jpg" alt="kullanıcı" height="150" class="align-self-center mb-3 mb-lg-0">
+                                                        </div><!--end col-->
+                                                        <div class="col align-self-center">
+                                                            <p class="font-18 fw-semibold mb-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Crovex - Yönetici ve Kontrol Paneli Şablonu</font></font></p>
+                                                            <p class="text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Crovex bir Bootstrap 4 yönetici panosudur, tamamen duyarlıdır ve web uygulamalarını hızlı ve kolay bir şekilde oluşturmaya yardımcı olacak harika özellikler içerir.
+                                                            </font></font></p>
+                                                            <a href="#" class="btn btn-soft-primary btn-sm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Canlı Önizleme</font></font></a> 
+                                                            <a href="#" class="btn btn-soft-primary btn-sm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Şimdi İndirin</font></font></a> 
+                                                        </div><!--end col-->
+                                                    </div> <!--end row-->   
+                                                </div><!--end card-body-->
+                                            </div><!--end card-->
+                                        </div><!--end col-->                                  
+                                    </div>  <!--end row-->
+                                </div>
+                                <div class="tab-pane fade active show" id="Profile_Settings" role="tabpanel" aria-labelledby="settings_detail_tab">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-xl-6">
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <div class="row align-items-center">
+                                                        <div class="col">                      
+                                                            <h4 class="card-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Kişisel bilgi</font></font></h4>                      
+                                                        </div><!--end col-->                                                       
+                                                    </div>  <!--end row-->                                  
+                                                </div><!--end card-header-->
+                                                <div class="card-body">                       
+                                                    <div class="form-group row">
+                                                        <label class="col-xl-3 col-lg-3 text-end mb-lg-0 align-self-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">İlk adı</font></font></label>
+                                                        <div class="col-lg-9 col-xl-8">
+                                                            <input class="form-control" type="text" value="Rosa">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label class="col-xl-3 col-lg-3 text-end mb-lg-0 align-self-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Soy isim</font></font></label>
+                                                        <div class="col-lg-9 col-xl-8">
+                                                            <input class="form-control" type="text" value="Dodson">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label class="col-xl-3 col-lg-3 text-end mb-lg-0 align-self-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Firma Adı</font></font></label>
+                                                        <div class="col-lg-9 col-xl-8">
+                                                            <input class="form-control" type="text" value="MannatThemes">
+                                                            <span class="form-text text-muted font-12"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">E-postanızı asla başka biriyle paylaşmayacağız.</font></font></span>
+                                                        </div>
+                                                    </div>
+                        
+                                                    <div class="form-group row">
+                                                        <label class="col-xl-3 col-lg-3 text-end mb-lg-0 align-self-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">İletişim Telefonu</font></font></label>
+                                                        <div class="col-lg-9 col-xl-8">
+                                                            <div class="input-group">
+                                                                <span class="input-group-text"><i class="las la-phone"></i></span>
+                                                                <input type="text" class="form-control" value="+123456789" placeholder="Telefon" aria-describedby="basic-addon1">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label class="col-xl-3 col-lg-3 text-end mb-lg-0 align-self-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">E-posta Adresi</font></font></label>
+                                                        <div class="col-lg-9 col-xl-8">
+                                                            <div class="input-group">
+                                                                <span class="input-group-text"><i class="las la-at"></i></span>
+                                                                <input type="text" class="form-control" value="rosa.dodson@demo.com" placeholder="E-posta" aria-describedby="basic-addon1">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label class="col-xl-3 col-lg-3 text-end mb-lg-0 align-self-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Web Sitesi Bağlantısı</font></font></label>
+                                                        <div class="col-lg-9 col-xl-8">
+                                                            <div class="input-group">
+                                                                <span class="input-group-text"><i class="la la-globe"></i></span>
+                                                                <input type="text" class="form-control" value=" https://mannatthemes.com/" placeholder="E-posta" aria-describedby="basic-addon1">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label class="col-xl-3 col-lg-3 text-end mb-lg-0 align-self-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Amerika Birleşik Devletleri</font></font></label>
+                                                        <div class="col-lg-9 col-xl-8">
+                                                            <select class="form-select">
+                                                                <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Londra</font></font></option>
+                                                                <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hindistan</font></font></option>
+                                                                <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Amerika Birleşik Devletleri</font></font></option>
+                                                                <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Kanada</font></font></option>
+                                                                <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tayland</font></font></option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <div class="col-lg-9 col-xl-8 offset-lg-3">
+                                                            <button type="submit" class="btn btn-sm btn-outline-primary button-style"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Kaydet</font></font></button>
+                                                            <button type="button" class="btn btn-sm btn-outline-danger dbutton-style"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Değişikliklerden vazgeç</font></font></button>
+                                                        </div>
+                                                    </div>                                                    
+                                                </div>                                            
                                             </div>
-                                        </div>
-                                        </div>
-                                    </div>
-                                </div><!--end card-body-->
-                            </div><!--end card-->
+                                        </div> <!--end col--> 
+                                        <div class="col-lg-6 col-xl-6">
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <h4 class="card-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Şifre değiştir</font></font></h4>
+                                                </div><!--end card-header-->
+                                                <div class="card-body"> 
+                                                    <div class="form-group row">
+                                                        <label class="col-xl-3 col-lg-3 text-end mb-lg-0 align-self-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mevcut Şifre</font></font></label>
+                                                        <div class="col-lg-9 col-xl-8">
+                                                            <input class="form-control" type="password" placeholder="Şifre">
+                                                            <a href="#" class="text-primary font-12"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Parolanızı mı unuttunuz ?</font></font></a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label class="col-xl-3 col-lg-3 text-end mb-lg-0 align-self-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Yeni Şifre</font></font></label>
+                                                        <div class="col-lg-9 col-xl-8">
+                                                            <input class="form-control" type="password" placeholder="Yeni Şifre">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label class="col-xl-3 col-lg-3 text-end mb-lg-0 align-self-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Şifreyi Onayla</font></font></label>
+                                                        <div class="col-lg-9 col-xl-8">
+                                                            <input class="form-control" type="password" placeholder="Yeniden Şifre">
+                                                            <span class="form-text text-muted font-12"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Şifrenizi asla paylaşmayın.</font></font></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <div class="col-lg-9 col-xl-8 offset-lg-3">
+                                                            <button type="submit" class="btn btn-sm btn-outline-primary button-style"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Şifre değiştir</font></font></button>
+                                                            <button type="button" class="btn btn-sm btn-outline-danger dbutton-style"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">İptal etmek</font></font></button>
+                                                        </div>
+                                                    </div>   
+                                                </div><!--end card-body-->
+                                            </div><!--end card-->
+                                        </div> <!-- end col -->                                                                              
+                                    </div><!--end row-->
+                                </div><!--end tab-pane-->
+                            </div><!--end tab-content-->
                         </div><!--end col-->
                     </div>
-</div>
+                    </div>
