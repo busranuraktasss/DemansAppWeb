@@ -1,0 +1,94 @@
+﻿@{
+    ViewData["Title"] = "Medicines Page";
+}
+
+@section css{
+    <style type="text/css">
+    .button-style{
+      background-color:#ED5E31 !important;
+      border-color:#ED5E31 !important;
+    }
+
+    .dbutton-style{
+      background-color:white !important;
+      border-color:#ED5E31 !important;
+      color:#ED5E31 !important;
+    }
+    </style>
+}
+
+<div class="container">
+    <div class="row p-5">
+        <div class="col-lg-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Kayıtlı İlaçlar</font></font></h4>
+                                </div><!--end card-header-->
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table id="medicine_list" class="table table-bordered mb-0 table-centered">
+                                            <thead>
+                                            <tr>
+                                                <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">İlaç Adı</font></font></th>
+                                                <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Kullanacağı Günler</font></font></th>
+                                                <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Saati</font></font></th>
+                                                <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Dozu</font></font></th>
+                                                <th class="text-right"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Aksiyon</font></font></th>
+                                            </tr>
+                                            </thead>
+                                           <tbody>
+                                               @* @foreach (var Medicines in Model)
+                                                {
+                                                    <tr>
+                                                        <td>@Medicines.OkulAdi</td>
+                                                        <td>@Medicines.Adres</td>
+                                                        <td>@Medicines.Adres</td>
+                                                        <td>@Medicines.Adres</td>
+                                                        <td><a href="#" class="Sil" name="@Medicines.ID">Sil</a></td>
+                                                    </tr>
+                                                }*@
+                                            </tbody>
+                                        </table><!--end /table-->
+                                    </div><!--end /tableresponsive-->
+                                </div><!--end card-body-->
+                            </div><!--end card-->
+                        </div>
+        <div class="col-lg-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">İlaç ekle</font></font></h4>
+                                    <p class="text-muted mb-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Listenize yeni bir ilaç ekleyin.</font></font></p> 
+                                </div><!--end card-header-->
+                                <div class="card-body">
+                                    <form>
+                                        <div class="mb-3 row">
+                                                <label for="medicine_name" class="col-sm-2 form-label align-self-center mb-lg-0 text-end"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">İlaç adı</font></font></label>
+                                                <div class="col-sm-10">
+                                                    <input class="form-control" type="text"  id="medicine_name" placeholder="İlaç adı">
+                                                </div>
+                                            </div>
+                                         <div class="mb-3 row">
+                                                <label for="day" class="col-sm-2 form-label align-self-center mb-lg-0 text-end"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Kullanılacak günler</font></font></label>
+                                                <div class="col-sm-10">
+                                                    <input class="form-control" type="text"  id="day" placeholder="Kullanılacak günler">
+                                                </div>
+                                            </div>
+                                        <div class="mb-3 row">
+                                                <label for="date_time" class="col-sm-2 form-label align-self-center mb-lg-0 text-end"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Zaman</font></font></label>
+                                                <div class="col-sm-10">
+                                                    <input class="form-control" type="time" value="13:45:00" id="date_time">
+                                                </div>
+                                            </div>
+                                         <div class="mb-3 row">
+                                                <label for="dose" class="col-sm-2 form-label align-self-center mb-lg-0 text-end"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Dozu</font></font></label>
+                                                <div class="col-sm-10">
+                                                    <input class="form-control" type="number"  id="dose" placeholder="Dozu">
+                                                </div>
+                                            </div>
+                                        <button type="submit" class="btn btn-primary button-style"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ekle</font></font></button>
+                                    </form>                                           
+                                </div><!--end card-body-->
+                            </div><!--end card-->
+                        </div>
+    </div>
+</div>
