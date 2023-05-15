@@ -4,23 +4,18 @@ using System.Data;
 
 namespace DemansAppWeb.Models
 {
-    public class Medicines
+    public class Commands
     {
         [Key]
         public int Id { get; set; }
 
-        public string Day { get; set; }
+        public string ProcessName { get; set; }
 
-        public string Name { get; set; }    
-
-        public DateTime? Time { get; set; }
-
-        public string UsageDuration { get; set; }
-
-        public string UsagePurpose { get; set; }
-
+        public bool? Status { get; set; }
+ 
         public int? UserId { get; set; }
 
         public int? CompanionId { get; set; }
+
     }
 }
