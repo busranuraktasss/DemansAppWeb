@@ -1,7 +1,15 @@
+using DemansAppWeb.Models;
+
 var builder = WebApplication.CreateBuilder(args);
+
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddControllersWithViews();
+IServiceCollection serviceCollection = builder.Services.AddDbContext<EntitiesContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DataConnection")));
+
 
 var app = builder.Build();
 
