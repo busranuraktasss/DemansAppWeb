@@ -4,7 +4,7 @@ using System.Data;
 
 namespace DemansAppWeb.Models
 {
-    public class TracesOfLove
+    public class TraceOfLoves
     {
         [Key]
         public int Id { get; set; }
@@ -18,5 +18,6 @@ namespace DemansAppWeb.Models
         public string Phone { get; set; }
 
         public string PlaceName { get; set; }   
+        public string City { get; set; }   
     }
 }

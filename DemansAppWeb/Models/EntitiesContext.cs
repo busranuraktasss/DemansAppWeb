@@ -25,7 +25,7 @@ namespace DemansAppWeb.Models
             modelBuilder.ApplyConfiguration(new MedicinesMap());
             modelBuilder.ApplyConfiguration(new MotivationSentencesMap());
             modelBuilder.ApplyConfiguration(new PicturesMap());
-            modelBuilder.ApplyConfiguration(new TracesOfLoveMap());
+            modelBuilder.ApplyConfiguration(new TraceOfLovesMap());
             modelBuilder.ApplyConfiguration(new UsersMap());
 
             base.OnModelCreating(modelBuilder);
@@ -39,7 +39,7 @@ namespace DemansAppWeb.Models
         public DbSet<Medicines> Medicines { get; set; }
         public DbSet<MotivationSentences> MotivationSentences { get; set; }
         public DbSet<Pictures> Pictures { get; set; }
-        public DbSet<TracesOfLove> TracesOfLove { get; set; }
+        public DbSet<TraceOfLoves> TraceOfLoves { get; set; }
         public DbSet<Users> Users { get; set; }
        
     }

@@ -13,7 +13,7 @@ namespace DemansAppWeb.Models.Map
 
             builder.Property(p => p.Lat).HasColumnType("string").IsRequired();
             builder.Property(p => p.Lng).HasColumnType("string").IsRequired();
-            builder.Property(p => p.UserId).HasColumnType("int").IsRequired();
+            builder.Property(p => p.UserId).HasColumnType("int").IsRequired(false);
 
 
         }
