@@ -63,7 +63,6 @@ namespace DemansAppWeb.Controllers
                 //Paging Size 
                 int pageSize = length != null ? Convert.ToInt32(length) : 0;
                 int skip = start != null ? Convert.ToInt32(start) : 0;
-                var recordsTotal = db.TraceOfLoves.Count();
 
                 var _tracesOfLove_list = db.TraceOfLoves.Where(w => w.City == cityName)
                     .Select(s => new shiftMapRequest()
@@ -103,8 +102,8 @@ namespace DemansAppWeb.Controllers
                 return Json(new
                 {
                     draw = draw,
-                    recordsFiltered = recordsTotal,
-                    recordsTotal = recordsTotal,
+                    recordsFiltered = _tracesOfLove_list.Count(),
+                    recordsTotal = _tracesOfLove_list.Count(),
                     data = _tracesOfLove_list
                 });
             }
