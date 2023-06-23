@@ -14,11 +14,21 @@
       border-color:#ED5E31 !important;
       color:#ED5E31 !important;
     }
+
+        @@media (min-width: 1400px) {
+            .container, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
+                max-width: 1450px;
+            }
+        }
+
+        .container {
+            padding-top: 40px !important;
+        }
     </style>
 }
 
 <div class="container">
-    <div class="row p-5">
+    <div class="row">
         <div class="col-lg-12">
                             <div class="card">
                                 <div class="card-header">
@@ -32,7 +42,7 @@
                                                 <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Doğalgaz</font></font></th>
                                                 <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Elektrik</font></font></th>
                                                 <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Su</font></font></th>
-                                                <th class="text-right"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Aksiyon</font></font></th>
+                                               
                                             </tr>
                                             </thead>
                                             <tbody>
@@ -49,10 +59,7 @@
                                                     <button type="submit" class="btn btn-primary button-style"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Aç</font></font></button>
                                                     <button type="submit" class="btn btn-primary dbutton-style"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Kapa</font></font></button>
                                                 </td>                                              
-                                                <td class="text-right">
-                                                    <button type="submit" class="btn btn-primary button-style"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Aç</font></font></button>
-                                                    <button type="submit" class="btn btn-primary dbutton-style"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Kapa</font></font></button>
-                                                </td>
+                                              
                                             </tr>
                                             </tbody>
                                         </table><!--end /table-->

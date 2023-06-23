@@ -7,6 +7,8 @@ using System.Reflection.Metadata;
 using DemansAppWeb.Models.Map;
 using DemansAppWeb.Models;
 using DemansAppWeb.Models;
+using DemansAppWebPro.Models.Map;
+using DemansAppWebPro.Models;
 
 namespace DemansAppWeb.Models
 {
@@ -27,6 +29,8 @@ namespace DemansAppWeb.Models
             modelBuilder.ApplyConfiguration(new PicturesMap());
             modelBuilder.ApplyConfiguration(new TraceOfLovesMap());
             modelBuilder.ApplyConfiguration(new UsersMap());
+            modelBuilder.ApplyConfiguration(new AdminsMap());
+
 
             base.OnModelCreating(modelBuilder);
         }
@@ -41,6 +45,8 @@ namespace DemansAppWeb.Models
         public DbSet<Pictures> Pictures { get; set; }
         public DbSet<TraceOfLoves> TraceOfLoves { get; set; }
         public DbSet<Users> Users { get; set; }
-       
+        public DbSet<Admins> Admins { get; set; }
+
+
     }
 }
